@@ -47,4 +47,4 @@ $model->getOptionValue('name', 'default value');
 $model->getOption('name');
 ```
 
-Спасибо!
+Надеюсь, пакет принесет вам пользу!
