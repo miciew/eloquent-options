@@ -11,9 +11,6 @@
     "require": {
         "php": ">=7.0.0"
     },
-    "require-dev": {
-        "orchestra/testbench": "~3.0"
-    },
     "extra": {
         "laravel": {
             "providers": [
