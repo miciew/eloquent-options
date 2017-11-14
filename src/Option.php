@@ -42,3 +42,4 @@ class Option extends Model
         return $builder->where('name', $name);
     }
 }
+
