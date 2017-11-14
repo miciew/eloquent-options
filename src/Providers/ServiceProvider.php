@@ -2,7 +2,7 @@
 
 namespace Miciew\Laravel\Option\Providers;
 
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 
 class ServiceProvider extends ServiceProvider
 {
