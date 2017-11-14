@@ -25,7 +25,13 @@ public function isBan()
 
 **Использование**
 
-Для начала нужно подключить в модели трейт
+Для начала нужно опубликовать пакет
+
+```
+php artisan vendor:publish --provider="Miciew\Laravel\Option\Providers\OptionServiceProvider"
+```
+
+нужно подключить в модели трейт
 
 ```php
 use Miciew\Laravel\Option\Traits\Optionable;
