@@ -13,13 +13,9 @@ class OptionServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([
-            __DIR__.'/../../config/config.php' => config_path('miciew-options.php'),
-        ], 'config');
+        $this->publishes([ __DIR__ . '/../../config/config.php' => config_path('eloquent-options.php'), ], 'config');
 
-        $this->publishes([
-            __DIR__.'/../../database/migrations/' => database_path('migrations')
-        ], 'migrations');
+        $this->publishes([ __DIR__ . '/../../database/migrations/' => database_path('migrations') ], 'migrations');
     }
 
     /**
