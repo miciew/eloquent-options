@@ -11,8 +11,6 @@ eloquent options
     use Optionable;<br>
 }</code>
 
-<code>
-$model->setOption('name', 'value');<br>
-$model->getOptionValue('name', 'default value');<br>
-$model->getOption('name')<br>
-</code>
+<code> $model->setOption('name', 'value'); </code>
+<code>$model->getOptionValue('name', 'default value');</code>
+</code>$model->getOption('name');</code>
