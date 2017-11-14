@@ -2,17 +2,23 @@
 
 # Описание
 
-Данный пакет предоставляет возможность добавлять кастоомные параметры для объектов модели.
-
 Пакет решает проблему хранения кастомных параметров для отдельных моделей. Таким образом, можно не добавлять миграции для создания дополнительных полей таблицы.
+Сохранять можно данные разных типов, от числа до объектов.
 
-Например, параметр для статьи "BAN". Вместо того, чтобы добавлять поле ban в таблицы articles, можно
-в модели Article обавить метод
+Например, нужно добавить параметр, позволяющий забанить статью.
+Вместо того, чтобы добавлять поле `ban` в таблицу `articles`, можно
+в модели Article объявить методы
 
 ```php
-public function setBan($flag = true)
+public function ban()
 {
-    $this->setOption('ban', $flag);
+    $this->setOption('ban', true);
+    return $this;
+}
+
+public function unBan()
+{
+    $this->setOption('ban', false);
     return $this;
 }
 
@@ -23,34 +29,40 @@ public function isBan()
 }
 ```
 
-**Использование**
 
-Для начала нужно опубликовать пакет
+#Установка
+
+```
+composer require miciew/eloquent-options
+```
+
+**Публикация пакета**
 
 ```
 php artisan vendor:publish --provider="Miciew\Laravel\Option\Providers\OptionServiceProvider"
 ```
 
-нужно подключить в модели трейт
+**Использование**
+
 
 ```php
 use Miciew\Laravel\Option\Traits\Optionable;
-```
 
 
-```php
 class Article
 {
     use Optionable;
 }
 ```
 
-Для объекта модели доступны методы:
+***Методы***:
 
 ```php
-$model->setOption('name', 'value');
-$model->getOptionValue('name', 'default value');
-$model->getOption('name');
+public function options(): morphMany;
+public function setOption($name, $value = null): null|Option;
+public function getOption($name, $default = null): null|Option;
+public function getOptionValue($name, $default = null): mix;
+
 ```
 
 Надеюсь, пакет принесет вам пользу!
