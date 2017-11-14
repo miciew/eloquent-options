@@ -42,6 +42,6 @@ class CreateOptionsTable extends Migration
 
     protected function getTableName()
     {
-        return config('miciew.table_name');
+        return config('eloquent-options.table_name');
     }
 }
