@@ -25,5 +25,5 @@
             "Miciew\\Laravel\\Option\\": "src/"
         }
     },
-    "version": "1.0.0"
+    "minimum-stabilit": "dev"
 }
