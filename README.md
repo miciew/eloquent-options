@@ -1,16 +1,49 @@
 # eloquent-options
-eloquent options
 
-**Usage**
+# Описание
+
+Данный пакет предоставляет возможность добавлять кастоомные параметры для объектов модели.
+
+Пакет решает проблему хранения кастомных параметров для отдельных моделей. Таким образом, можно не добавлять миграции для создания дополнительных полей таблицы.
+
+Например, параметр для статьи "BAN". Вместо того, чтобы добавлять поле ban в таблицы articles, можно
+в модели Article обавить метод
+
+```php
+public function setBan($flag = true)
+{
+    $this->setOption('ban', $flag);
+    return $this;
+}
+
+public function isBan()
+{
+    $default = false;
+    return $this->getOptionValue('ban', $default);
+}
+```
+
+**Использование**
+
+Для начала нужно подключить в модели трейт
+
+```php
+use Miciew\Laravel\Option\Traits\Optionable;
+```
 
 
-<code>use Miciew\Laravel\Option\Traits\Optionable; <br></code>
+```php
+class Article
+{
+    use Optionable;
+}
+```
 
-<code>class A extends Model <br>
-{<br>
-    use Optionable;<br>
-}</code>
+Для объекта модели доступны методы:
 
-<code> $model->setOption('name', 'value'); </code>
-<code>$model->getOptionValue('name', 'default value');</code>
-<code>$model->getOption('name');</code>
+```php
+$model->setOption('name', 'value');
+$model->getOptionValue('name', 'default value');
+$model->getOption('name');
+```
+
