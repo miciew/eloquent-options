@@ -3,13 +3,13 @@ eloquent options
 
 **Usage**
 
-_use Miciew\Laravel\Option\Traits\Optionable;
+<b><i>use Miciew\Laravel\Option\Traits\Optionable;
 
 class A extends Model
 {
     use Optionable;
-}_
+}</i></b>
 
-_**$model->setOption('name', 'value');
+<b><i>$model->setOption('name', 'value');
 $model->getOptionValue('name', 'default value');
-$model->getOption('name')_**
+$model->getOption('name')</i></b>
