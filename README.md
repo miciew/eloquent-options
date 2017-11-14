@@ -13,4 +13,4 @@ eloquent options
 
 <code> $model->setOption('name', 'value'); </code>
 <code>$model->getOptionValue('name', 'default value');</code>
-</code>$model->getOption('name');</code>
+<code>$model->getOption('name');</code>
