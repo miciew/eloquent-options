@@ -30,7 +30,7 @@ public function isBan()
 ```
 
 
-#Установка
+# Установка
 
 ```
 composer require miciew/eloquent-options
@@ -40,6 +40,10 @@ composer require miciew/eloquent-options
 
 ```
 php artisan vendor:publish --provider="Miciew\Laravel\Option\Providers\OptionServiceProvider"
+```
+
+```
+php artisan migrate
 ```
 
 **Использование**
