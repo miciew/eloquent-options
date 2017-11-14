@@ -17,7 +17,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Miciew\\Laravel\\Providers\\ServiceProvider"
+                "Miciew\\Laravel\\Option\\Providers\\OptionServiceProvider\\"
             ],
             "aliases": {
             }
