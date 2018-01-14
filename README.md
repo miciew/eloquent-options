@@ -50,12 +50,12 @@ php artisan migrate
 
 
 ```php
-use Miciew\Laravel\Option\Traits\Optionable;
+use Miciew\Laravel\Option\Traits\HasOptions;
 
 
 class Article
 {
-    use Optionable;
+    use HasOptions;
 }
 ```
 
