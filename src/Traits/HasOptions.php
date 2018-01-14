@@ -3,8 +3,6 @@
 namespace Miciew\Laravel\Option\Traits;
 
 
-namespace Miciew\Laravel\Option;
-
 trait HasOptions
 {
     /**
